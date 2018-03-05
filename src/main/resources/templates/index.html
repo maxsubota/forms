@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Forms</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"
+          th:href="@{css/bootstrap.min.css}"/>
+</head>
+<body>
+
+
+<div class="container">
+
+    <div>
+        <h1>Create form</h1>
+        <h2>
+            <a th:href="@{/new-form}"><button class="btn btn-info btn-lg offset-6">New Form</button></a>
+        </h2>
+
+        <div class="row">
+
+            <ul class="list-group">
+                <th:block th:each="form : ${forms}">
+                    <a href="/public-form?userToken=" th:href="'/public-form?userToken=' + ${form.userToken}" class="list-group-item list-group-item-action" th:text="${form.title}"></a>
+                </th:block>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
+
+</body>
+
+<script src="../static/js/jquery.min.js" th:src="@{js/jquery.min.js}"></script>
+<script src="../static/js/bootstrap.min.js" th:src="@{js/bootstrap.min.js}"></script>
+
+</html>

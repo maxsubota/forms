@@ -1,0 +1,25 @@
+body {
+    padding-top: 72px;
+}
+@media (min-width: 992px) {
+    body {
+        padding-top: 76px;
+    }
+
+    .form {
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+.form-title {
+    font-size: 48px;
+}
+
+.question-title {
+    font-size: 24px;
+}
+
+.answer-title {
+    font-size: 16px;
+}
